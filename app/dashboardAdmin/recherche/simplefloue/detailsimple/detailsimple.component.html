@@ -1,0 +1,212 @@
+<aside class="main-sidebar sidebar-dark-primary elevation-4">
+  <!-- Brand Logo -->
+  <a routerLink="" class="brand-link">
+    <img src="assets/logo.png" alt="" class="brand-image img-circle elevation-3" style="opacity: .8">
+    <span class="brand-text font-weight-light">Fonds Immobiliers</span>
+  </a>
+
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <!-- Sidebar user panel (optional) -->
+    <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+      <div class="image">
+        <i class="fa fa-user-circle-o" style="font-size:48px;color:#fff"></i>
+      </div>
+      <div class="info">
+        <a  class="d-block">Amani connecté</a>
+      </div>
+    </div>
+
+    <!-- SidebarSearch Form -->
+    <div class="form-inline">
+      <div class="input-group" data-widget="sidebar-search">
+        <input class="form-control form-control-sidebar" type="search" placeholder="Search" aria-label="Search">
+        <div class="input-group-append">
+          <button class="btn btn-sidebar">
+            <i class="fas fa-search fa-fw"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sidebar Menu -->
+    <nav class="mt-2">
+      <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+        <!-- Add icons to the links using the .nav-icon class
+             with font-awesome or any other icon font library -->
+        <li class="nav-item menu-open">
+          <a  class="nav-link active">
+            <i class="nav-icon fas fa-tachometer-alt"></i>
+            <p>
+              Dashboard
+
+            </p>
+          </a>
+
+        </li>
+        <li class="nav-item">
+          <a href="pages/widgets.html" class="nav-link">
+            <i class="nav-icon fas fa-th"></i>
+            <p>
+              Gere les biens
+
+            </p>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link">
+            <i class="nav-icon fas fa-copy"></i>
+            <p>
+              Recherche
+              <i class="fas fa-angle-left right"></i>
+
+            </p>
+          </a>
+          <ul class="nav nav-treeview">
+
+            <li class="nav-item">
+              <a href="/dashboardAdmin/rechercheclassique" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Classique</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="pages/layout/fixed-footer.html" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Simple flous</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="pages/layout/collapsed-sidebar.html" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Complexe</p>
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a [routerLink]="['/dashboardAdmin/type']" class="nav-link">
+            <i class="nav-icon fas fa-home"></i>
+            <p>
+              Type
+
+            </p>
+          </a>
+
+        </li>
+        <li class="nav-item">
+          <a [routerLink]="['/dashboardAdmin/fondImmobilier']" class="nav-link">
+            <i class="nav-icon fas fa-home"></i>
+            <p>
+              Fond Immobilier
+
+            </p>
+          </a>
+
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link">
+            <i class="nav-icon fas fa-tree"></i>
+            <p>
+              Consulter les fond-immob
+
+            </p>
+          </a>
+
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link">
+            <i class="nav-icon fas fa-edit"></i>
+            <p>
+              Contact
+            </p>
+          </a>
+
+        </li>
+
+      </ul>
+    </nav>
+    <!-- /.sidebar-menu -->
+  </div>
+  <!-- /.sidebar -->
+</aside>
+
+<!-- PROPERTY DETAILS -->
+<section class="property-details padding">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8">
+        <div class="row">
+          <div class="col-md-12">
+            <div id="property-d-1" class="owl-carousel1 pt-4">
+              <div class="item"><img src="./assets/images/property-d-1-1.jpg" alt="image" /></div>
+
+            </div>
+            <!--div id="property-d-1-2" class="owl-carousel pt-4">
+              <div class="item"><img src="./assets/images/property-d-s-1-2.jpg" alt="image" /></div>
+              <div class="item"><img src="./assets/images/property-d-s-1-3.jpg" alt="image" /></div>
+              <div class="item"><img src="./assets/images/property-d-s-1-4.jpg" alt="image" /></div>
+              <div class="item"><img src="./assets/images/property-d-s-1-5.jpg" alt="image" /></div>
+
+            </div-->
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="property-tab">
+              <!-- Nav tabs -->
+              <ul class="nav nav-tabs" role="tablist">
+                <li role="presentation" class="active"><a href="#description" aria-controls="description" role="tab" data-toggle="tab" class="fs-5">Description</a></li>
+                <li role="presentation"><a href="#summary" aria-controls="Adresse" role="tab" data-toggle="tab" class="fs-5">coordonné</a></li>
+                <li role="presentation"><a href="#features" aria-controls="features" role="tab" data-toggle="tab" class="fs-5">Prix</a></li>              </ul>
+              <!-- Tab panes -->
+              <div class="tab-content ">
+                <div role="tabpanel" class="tab-pane active" id="description">
+                  <h3 class=" bottom20 top10  pt-4 fs-5" >{{fondImmobilier.description}}</h3>
+                  <!-- <div class="property_meta margin-t-2 bg-black bottom40">
+                     <span><i class="icon-select-an-objecto-tool"></i>4800 sq ft</span>
+                     <span><i class=" icon-microphone"></i>2 Office Rooms</span>
+                     <span><i class="icon-safety-shower"></i>1 Bathroom</span>
+                     <span><i class="icon-old-television"></i>TV Lounge</span>
+                     <span><i class="icon-garage"></i>1 Garage</span>
+                   </div>-->
+                  <button class="btn_fill" type="submit " (click)="retoure()">Retour</button>
+                  <!--  <button class="btn_fill" type="submit" (click)="louer(item)" >Louer</button>
+                     <button class="btn_fill" type="submit" >Acheter</button>-->
+
+                </div>
+                <div role="tabpanel" class="tab-pane" id="summary">
+                  <div class="col-md-6 col-sm-6 col-xs-12 property-d-table">
+                    <table class="table table-striped table-responsive">
+                      <tbody>
+                      <tr>
+                        <td class="fs-5"><b class="fs-5">Surface:</b> {{fondImmobilier.surface}}</td>
+                      </tr>
+                      <tr>
+                        <td class="fs-5"><b class="fs-5">Adresse:</b>{{fondImmobilier.adresse}} </td>
+                      </tr>
+                      <tr>
+                        <td class="fs-5"><b class="fs-5">Distance:</b>{{fondImmobilier.distance}} </td>
+                      </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                <div role="tabpanel" class="tab-pane" id="features">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <p class="fs-5">Prix:{{fondImmobilier.prix}} </p>
+                    </div>
+                  </div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div></div></div>
+</section>
+<footer class="main-footer mt-5">
+  <strong><a href="http://adminlte.io"></a>.</strong>
+  <div class="float-right d-none d-sm-inline-block">
+    <b></b>
+  </div>
+</footer>

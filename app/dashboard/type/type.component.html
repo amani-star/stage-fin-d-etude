@@ -1,0 +1,32 @@
+<div class="container">
+  <div class="panel panel-primary">
+    <div class="panel-heading"> Liste des types</div>
+    <div class="panel-body">
+      <button class="btn1 btn-primary" (click)="onGetType()">Ajouter Nouvelle  Type</button>
+
+    </div>
+    <div class="panel-body">
+      <!--<form #f="ngForm" (ngSubmit)="onRecherche(f.value)">
+        <div class="form-group">
+          <label>motclé</label>
+          <input type="text" name="motclé" ngModel>
+          <button type="submit" class="btn btn-primary">Chercher</button>
+        </div>
+      </form>-->
+      <table *ngIf="type" class="table table-striped">
+        <tr>
+          <th>Photo</th>
+          <th>documentId</th>
+          <th>nom</th></tr>
+        <tr *ngFor="let p of type">
+         <!--td>{{p.photo}}</td>
+          <img alt="" :src="*{data:image/j"-->
+         <td>{{p.documentId}}</td>
+          <td>{{p.nom}}</td>
+          <td > <a  class="btn btn-danger" (click)="deleteType(p)"> Delete</a></td>
+          <td > <a  class="btn btn-success" (click)="updateType(p)"> Modifier</a></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>

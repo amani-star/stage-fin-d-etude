@@ -1,0 +1,122 @@
+/*#header-top {
+  padding: 10px 0;
+  margin-bottom: 15px;
+}*/
+.socials li {
+  display: inline-block;
+}
+.socials li a {
+  color: #dbdbdb;
+  border: 1px solid #dbdbdb;
+  display: block;
+  font-size: 14px;
+  height: 32px;
+  line-height: 30px;
+  width: 32px;
+  margin: 5px 5px 5px 0;
+  text-align: center;
+}
+.socials li a:hover{
+  color: #fff;
+  background: #ed2a28;
+}
+
+.imglogoheader {
+  width: 50%;
+  display: block;
+  margin: auto;
+}
+.nav.navbar.bootsnav ul.nav > li > a {
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: normal;
+  padding: 20px 15px;
+  font-size: 15px;
+  color: #555555;
+}
+#header-bottom .get-tuch {
+  display: inline-block;
+}
+#header-bottom .get-tuch i {
+  display: inline-block;
+  font-size: 49px;
+  margin-right: 7px;
+  vertical-align: text-bottom;
+}
+.top20 {
+  margin-top: 20px;
+}
+#header-bottom .get-tuch > ul {
+  display: inline-block;
+  padding-left: 2%;
+}
+
+ol, ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.get-tuch h4{
+  font-size: 18px;
+  font-weight: 600;
+}
+.get-tuch p {
+  font-size: 15px;
+  color: #676767;
+}
+button.btn.btn.btn-outline-danger.text-light {
+  margin-inline: 9px;
+}
+/*header*/
+.color_red {
+  color: #ed2a28;}
+.line_1 {
+  width: 200px;
+  margin-top: 10px;}
+.line_1, .line_2, .line_3/*, .line_1-1, .line_2-2, .line_3-3*/ {
+  display: block;
+  height: 1px;
+  background: #dbdbdb;
+  position: relative;}
+.line_2 {
+  width: 150px;
+  margin-top: 5px;}
+.line_3 {
+  width: 100px;
+  margin-top: 5px;
+  margin-bottom: 15px;}
+.property-list-list {
+  border-top: 3px solid #ed2a28;}
+.property-list-list-info a > h3 {
+  padding-top: 20px;}
+li.left {
+  padding-left: 202px;}
+li.right {
+  padding-inline: 753px;}
+
+element.style {
+}
+.property-list-list ul li.right span {
+  background-color: #ed2a28;
+}
+.property-list-list ul li.right span {
+  border-radius: 100px;
+  color: #fff;
+  padding: 5px 11px;
+}
+.property-list-list {
+  margin-top: 50px;
+  width: 922px;
+  border-top: 3px solid #ed2a28;
+  padding-top: 32px;
+  margin-inline: 270px;}
+img {
+  margin-inline: -97px;
+  vertical-align: middle;
+  border-style: none;
+  margin-top: -242px;}
+.titre,.prix{
+  font-weight: 900!important;
+  color: #ed2a28;
+}
+

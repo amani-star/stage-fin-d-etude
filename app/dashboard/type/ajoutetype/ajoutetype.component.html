@@ -1,0 +1,33 @@
+<div class="container">
+  <div class="col-md-9 col-sm-6 col-xl-12" >
+<div class="panel panel-default">
+  <div class="panel-heading"> Nouveau Type </div>
+  <div class="panel-body" >
+    <form #f="ngForm" (ngSubmit)="saveType(f.value)" enctype="multipart/form-data">
+      <div class="form-group">
+        <label class="control-label"> Nom</label>
+        <input class="form-control" type="text" name="nom" ngModel>
+      </div>
+      <label>ajoute image</label>
+      <div class="custom-file mb-2">
+        <input type="file" name="file" class="custom-file-input" id="customFile">
+
+        <button class="btn btn-success" type="submit"> Ajoute</button>
+
+      </div>
+    </form>
+  </div>
+  <div class="panel-body" *ngIf="mode==2">
+    <button class=" btn btn-success" (click)="onNouveauType()"> Nouveau Type</button>
+    <div class="from-group">
+      <label>documentId:</label>
+      <label>{{currentType.documentId}}</label>
+    </div>
+    <div class="from-group">
+      <label>nom:</label>
+      <label>{{currentType.nom}}</label>
+    </div>
+  </div>
+</div>
+  </div>
+</div>

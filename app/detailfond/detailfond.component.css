@@ -1,0 +1,97 @@
+.owl-carousel{
+  height: 100%;
+  width: 100%;
+  display: flex;
+}
+#property-d-1-2 .item > img {
+  opacity: 0.4;
+  width: 100%;
+}
+h3{font-weight:600 ;    font-size: 24px;}
+.text-uppercase {text-transform: uppercase;}
+/*cage*/
+.property-tab {
+  border: 1px solid #dbdbdb;
+  margin-top: 50px;
+  padding: 0px;
+  width: 128%;
+  margin-inline: 168px;
+}
+.property-tab .nav-tabs > li > a {
+  border-radius: 0;
+  line-height: 1.42857;
+  margin-right: 0;
+  background: #454040;
+  color: #fff;
+  border-right: 1px solid #dbdbdb;
+}
+.property-tab .nav-tabs > li > a:hover {
+  border: 1px solid transparent;
+  background-color: #fff;
+  color: #1f1f1f;
+}
+
+.tab-content>.active {
+  display: block;    padding: 50px 30px 30px;}
+.owl-carousel1{margin-inline: 168px;}
+.owl-carousel{margin-inline: 168px;}
+.nav nav-tabs{margin-inline: 168px;}
+
+
+/****************/
+.property-tab .nav-tabs {
+  border-bottom: 0 none;
+  display: table;
+  width: 100%;
+}
+.property-tab .nav-tabs > li {
+  display: table-cell;
+  float: none;
+  margin-bottom: 0;
+  text-align: center;
+}
+.nav>li>a {
+  position: relative;
+  display: block;
+  padding: 15px 15px;
+}
+.property-tab .nav-tabs > li.active > a, .property-tab .nav-tabs > li.active > a:focus, .property-tab .nav-tabs > li.active > a:hover {
+  background-color: #ed2a28;
+}
+.property_meta {
+  background: #ed2a28!important;
+}
+.property_meta {
+  width: 100%;
+  padding: 17px;
+  text-align: center;
+  position: relative;
+}
+.bottom40 {
+  margin-bottom: 40px;
+}
+button.btn_fill {
+  padding: 12px 40px;
+  text-transform: uppercase;
+  border-radius: 4px;
+  display: inline-block;
+  background: #ed2a28;
+  color: #ffff;
+}
+.table>tr>td {
+  padding: 8px;}
+.table-responsive {
+  display: table;}
+.property-d-table .table > tbody > tr > td, .property-d-table .table > tbody > tr > th, .property-d-table .table > tfoot > tr > td, .property-d-table .table > tfoot > tr > th, .property-d-table .table > thead > tr > td, .property-d-table .table > thead > tr > th {
+  border-top: 1px solid #e5e5e5;
+  line-height: 1.42857;
+  /* padding: 9px 17px; */
+  /* vertical-align: top; */
+  color: #676767;
+}
+.property-d-table table {
+  border: 1px solid #e5e5e5;
+}
+.item {
+  margin-inline: 91px;
+}

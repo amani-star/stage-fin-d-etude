@@ -1,0 +1,90 @@
+<app-header></app-header>
+<section id="contact-us">
+  <div class="container">
+    <div class="row padding">
+
+      <div class="col-md-8">
+        <div class="bottom40 pt-5">
+          <h2 class="text-uppercase">Envoyer<span class="color_red"> des messages </span></h2>
+          <div class="line_1"></div>
+          <div class="line_2"></div>
+          <div class="line_3"></div>
+        </div>
+        <div class="agent-p-form p-t-30">
+
+          <div class="row">
+            <form class="callus padding-bottom"  id="contact-form" onSubmit="return false" #f=ngForm (ngSubmit)="ajoutecontact(f.value)" >
+
+              <div class="form-group">
+                <div id="result">
+                </div>
+              </div>
+              <div class="col-md-12">
+                <div class="single-query">
+                  <input type="email" class ="keyword-input mb-4" placeholder="Nom " name="nom" id="nom " ngModel>
+                </div>
+              </div>
+              <div class="col-md-12">
+                <div class="single-query">
+                  <input type="email" class ="keyword-input mb-4" placeholder=" Prenom" name="prenom" id=" prenom" ngModel>
+                </div>
+              </div>
+              <div class="col-md-12">
+                <div class="single-query">
+                  <input type="text" class ="keyword-input mb-4" placeholder="E - mail" name="mail" id="email" ngModel>
+                </div>
+              </div>
+              <div class="col-md-12">
+                <div class="single-query">
+                  <input type="email" class ="keyword-input mb-4" placeholder="Téléphone" name="telephone" id="Telephone" ngModel>
+                </div>
+              </div>
+              <div class="col-md-12">
+                <div class="single-query">
+                  <textarea name="message" placeholder="Message" id="message" ngModel></textarea>
+                </div>
+              </div>
+              <div class="col-md-12">
+                <button type="submit" class="btn btn-danger" id="btn_submit" name="btn_submit" >Envoyer</button>
+              <button type="submit" class="btn btn-success" id="button" name="btn_submit" (click)="envoyermail()" > Message reçue </button>
+              </div>
+            </form>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="bottom40 pt-5">
+          <h2 class="text-uppercase">CONTACTEZ-<span class="color_red"> Nous</span></h2>
+          <div class="line_1"></div>
+          <div class="line_2"></div>
+          <div class="line_3"></div>
+        </div>
+
+        <div class="agent-p-contact p-t-30">
+          <div class="agetn-contact-2 pt-4">
+            <p><i class="bi bi-telephone"></i> (+216) 26 433 293</p>
+            <a href="#.">
+              <p><i class=" icon-icons142"></i> AdminAdmin@gmail.com</p>
+            </a>
+
+          </div>
+          <ul class="socials">
+            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+            <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+            <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+            <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="contact">
+    <div id="map"></div>
+  </div>
+</section>
+<app-footer></app-footer>

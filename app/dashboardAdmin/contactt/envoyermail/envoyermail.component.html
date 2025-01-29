@@ -1,0 +1,52 @@
+
+
+  <section id="contact-us">
+    <div class="container">
+      <div class="row padding">
+
+        <div class="col-md-12">
+
+          <div class="agent-p-form p-t-30">
+
+            <div class="row">
+              <form class="callus padding-bottom"  id="contact-form" onSubmit="return false" #f=ngForm (ngSubmit)="Envoyer(f.value)" >
+
+                <div class="form-group">
+                  <div id="result">
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <div class="single-query">
+                    <input type="email" class ="keyword-input mb-4" placeholder="Nom " name="nom" id="nom " ngModel>
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <div class="single-query">
+                    <input type="text" class ="keyword-input mb-4" placeholder="E - mail" name="mail" id="mail" ngModel>
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <div class="single-query">
+                    <textarea name="message" placeholder="Description"  name="description"  id="description" ngModel></textarea>
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <button type="submit" class="btn btn-danger" id="btn_submit" name="btn_submit" >Envoyer</button>
+                </div>
+              </form>
+
+            </div>
+          </div>
+        </div>
+
+
+
+      </div>
+    </div>
+
+    <div class="contact">
+      <div id="map"></div>
+    </div>
+  </section>
+
+

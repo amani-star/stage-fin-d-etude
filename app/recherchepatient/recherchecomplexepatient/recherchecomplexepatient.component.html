@@ -1,0 +1,279 @@
+<header id="main_header">
+
+  <!--===== HEADER TOP =====-->
+  <div id="header-bottom">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-2 hidden-xs hidden-sm"><img src="assets/logo.png" alt="logo" width="50%"/></div>
+        <div class="col-md-10 col-sm-12 col-xs-12">
+          <div class="row">
+            <div class="get-tuch text-left top20 col-md-4 col-sm-4">
+              <i class="fa fa-phone"></i>
+              <ul>
+                <li>
+                  <h4>Téléphone</h4>
+                </li>
+                <li>
+                  <p>26 433 293</p>
+                </li>
+              </ul>
+            </div>
+
+            <div class="get-tuch text-left top20  col-md-4 col-sm-4">
+              <i class="fa fa-map-marker" aria-hidden="true"></i>
+              <ul>
+                <li>
+                  <h4>Adresse</h4>
+                </li>
+                <li>
+                  <p>Medenine</p>
+                </li>
+              </ul>
+            </div>
+
+            <div class="get-tuch text-left top20  col-md-4 col-sm-4">
+              <i class="fa fa-envelope" aria-hidden="true"></i>
+              <ul>
+                <li>
+                  <h4>Email</h4>
+                </li>
+                <li>
+                  <p>AdminAdmin@gmail.com</p>
+                </li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--===== #/HEADER TOP =====-->
+  <div class="container-fluid">
+    <div class="row">
+
+      <div class="col-md-12 col-sm-12 col-xs-12">
+        <!--nav-->
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+          <div class="container-fluid">
+
+            <button class="navbar-toggler" type="button" (click)="navbarCollapsed = !navbarCollapsed" [attr.aria-expanded]="!navbarCollapsed" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" [ngbCollapse]="navbarCollapsed" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link active text-light" aria-current="page" routerLink="/patient">Accueil</a>
+                </li>
+                <!--      <li class="nav-item">
+                        <a class="nav-link text-light" href="#">Offres</a>
+                      </li>-->
+
+                <li class="nav-item dropdown">
+                  <a href="#." class="nav-link dropdown-toggle text-light" data-toggle="dropdown">Recherche</a>
+                  <ul class="dropdown-menu">
+                    <li><a href="/recercheclassiquepatient" class="dropdown-item">Recherche Classique</a></li>
+                    <li><a href="/rechercherflouesimplepatient" class="dropdown-item">Recheche flexible(simple)</a></li>
+                    <li><a href="/recherchecomplexepatient" class="dropdown-item">Recherche flexible(complexe)</a></li>
+                  </ul>
+
+                  <!-- <li class="nav-item">
+                      <a class="nav-link" routerLink="/bien">Bien</a>
+                    </li>-->
+                  <!--li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Dropdown
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <li><a class="dropdown-item" href="#">Action</a></li>
+                      <li><a class="dropdown-item" href="#">Another action</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                  </li-->
+              </ul>
+              <form class="d-flex">
+                <!-- <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">-->
+                <button class="btn btn btn-outline-danger text-light" type="submit"  routerLink="/login">Decconnexion</button>
+              </form>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </div>
+
+</header>
+<!-- PAGE TITLE -->
+<div class="page-title page-main-section parallaxie" style="background: url('assets/home/titlebg.jpg');">
+  <div class="container padding-bottom-top-120 text-uppercase text-center">
+    <div class="main-title">
+
+      <h1>Recherche FLEXIBLE ET FLOUE(COMPLEXE)</h1>
+      <h5>des fond immobilier</h5>
+      <div class="line_4"></div>
+      <div class="line_5"></div>
+      <div class="line_6"></div>
+      <a routerLink="/patient">Accueil</a>
+      <span><i class="fa fa-angle-double-right" aria-hidden="true"></i></span>
+      <a  routerLink="/recherchecomplexepatient">Recherche FLEXIBLE ET FLOUE</a>
+    </div>
+  </div>
+</div>
+<!-- PAGE TITLE -->
+<!-- LISTING STYLE-->
+<section id="agent-p-2" class="listing-1 bg_light padding_top">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <h2 class="uppercase">Listes <span class="color_red">des fonds</span></h2>
+        <div class="line_1"></div>
+        <div class="line_2"></div>
+        <div class="line_3"></div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-8 col-sm-12 col-xs-12">
+        <form class="findus">
+
+          <div class="row pt-3">
+            <div class="col-md-6 col-sm-6" *ngFor="let item of fondImmobilier">
+              <div class="property_item heading_space">
+                <div class="image">
+                  <img src="assets/fomdImm/fond1.jpg" alt="" class="img-responsive" width="100%" *ngIf="item.documentId === '1'">
+                  <img src="assets/fomdImm/depot.JPG" alt="" class="img-responsive" width="100%"  *ngIf="item.documentId === '2'">
+                  <img src="assets/fomdImm/appartement.jpg" alt="" class="img-responsive"  width="100%"  *ngIf="item.documentId === '3'">
+                  <img src="assets/fomdImm/studioo.jpg" alt="" class="img-responsive"  width="100%"  *ngIf="item.documentId === '4'">
+                  <div class="property_meta">
+                    <span><i class="fa fa-object-group"></i>{{item.surface}} m²</span>
+                    <span><i class="fa fa-map-marker"></i>{{item.distance}} KM</span>
+                    <span><i class="	fas fa-search-plus 	"></i>{{item.age}} Année</span>
+                  </div>
+                </div>
+                <div class="proerty_content">
+                  <div class="proerty_text">
+                    <div class="row">
+                      <div class="col-md-6 ">
+                        <div *ngFor="let type of listeType">
+                          <h2 class="text-left">  <span *ngIf="type.documentId === item.documentId">{{type.nom}}</span>
+                          </h2>
+                        </div></div>
+                      <div class="col-md-6 "> <h2 class="text-right">{{item.logement}}</h2></div></div>
+                    <span class="bottom10 descriptionText">{{item.description}}</span>
+                    <p><strong class="pt-5">{{item.prix}} DT</strong></p>
+                  </div>
+                  <div class="favroute clearfix">
+                    <h4 class="text-center p-2" routerLink="/detailfond/{{item.fondId}}">Plus des détails</h4>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </form>
+      </div>
+      <div class="col-md-4 colsm-4 col-xs-12">
+        <div class="property-query-area padding-all20">
+          <div class="row">
+            <div class="col-md-12">
+              <h1 class="text-uppercase bottom40 text-center pt-4"  >Recherche <span class="color_red">Flexible et Floue(complexe)</span></h1>
+            </div>
+          </div>
+          <div class="row p-1 pb-5">
+            <div class="col-md-12">
+              <div class="single-query">
+                <table>
+                  <tr>      <td>  <select class="selectpicker mt-4" data-live-search="true"  name="selectlogement" [(ngModel)]="selectlogement">
+                    <option value="" disabled selected>type de Logement</option>
+                    <option value="louer" >louer</option>
+                    <option value="acheter" >acheter</option>
+                  </select></td>
+                    <td> <select  name="cars" id="cars" [(ngModel)]="selectedOption" >
+                      <option value="" disabled selected>Le nom des types</option>
+                      <option *ngFor="let type of listeType" [value]="type.documentId" >
+                        {{type.nom}}
+                      </option>
+                    </select></td></tr></table>
+              </div>
+            </div>
+
+            <table border="0">
+              <tr>  <td><select class="form-select mt-4" aria-label="Default select example"  name="prix"[(ngModel)]="prix">
+                <option value="" disabled selected>Terme linguistique de prix</option>
+                <option value="Non cher">Non cher</option>
+                <option value="Assez cher">Assez cher</option>
+                <option value="Cher">Cher</option>
+              </select></td>
+              </tr>
+              <tr>  <select class="form-select mt-4" aria-label="Default select example" name="distance" [(ngModel)]="distance">
+                <option value="" disabled selected>Terme linguistique proximite</option>
+                <option value="Proche">Proche</option>
+                <option value="Assez proche">Assez proche</option>
+                <option value="Loin">Loin</option>
+              </select>
+              </tr>
+              <tr>  <select class="form-select mt-4" aria-label="Default select example"  name="age"[(ngModel)]="age">
+                <option value="" disabled selected>Terme linguistique ancienneté</option>
+                <option value="Nouvelle">Nouvelle</option>
+                <option value="Assez ancienneté">Assez ancienneté</option>
+                <option value="Ancienneté">Ancienneté</option>
+              </select>
+              </tr>
+            </table>
+            <table >
+              <tr> <td><div class="form-check mt-4">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" (change)="onItemchange('et')">
+                <label class="form-check-label" for="flexRadioDefault1">
+                  ET
+                </label>
+              </div></td>
+                <td> <div class="form-check mt-4">
+                  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked (change)="onItemchange('ou')">
+                  <label class="form-check-label" for="flexRadioDefault2">
+                    OU
+                  </label>
+                </div></td>  </tr>
+            </table>
+
+            <div class="col-md-12 text-center">
+              <div class="query-submit-button top30">
+
+                <tr>  <div class="query-submit-button mt-4">
+
+                  <td>  <button type="submit" class="btn_fill1 black" (click)="concate()" routerLink="/rechcomplexepatient/{{selectlogement}}/{{selectedOption}}/{{prix}}/{{distance}}/{{age}}/{{termelogique}}" >Recherche</button>
+
+                  </td>
+
+                  <td>            <button type="submit" class="btn_fill3 black" (click)="annulerrechercher()">Actualisé</button>
+                  </td>
+                </div></tr>
+
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- LISTING -->
+
+
+
+
+
+
+
+
+
+
+
+<app-footer></app-footer>
+

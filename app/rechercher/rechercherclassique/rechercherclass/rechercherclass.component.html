@@ -1,0 +1,65 @@
+<app-header></app-header>
+
+<!-- PAGE TITLE -->
+<div class="page-title page-main-section parallaxie" style="background: url('assets/home/titlebg.jpg');">
+  <div class="container padding-bottom-top-120 text-uppercase text-center">
+    <div class="main-title">
+
+      <h1>Recherche Classique</h1>
+      <h5>des fond immobilier</h5>
+      <div class="line_4"></div>
+      <div class="line_5"></div>
+      <div class="line_6"></div>
+      <a routerLink="/proprietaire">Accueil</a>
+      <span><i class="fa fa-angle-double-right" aria-hidden="true"></i></span>
+      <a  routerLink="/rechercherclassique">Recherche Classique</a>
+    </div>
+  </div>
+</div>
+<!-- PAGE TITLE -->
+<section class="my_pro padding bg-color-gray">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 pt-4">
+        <h2 class="text-uppercase"> MES <span class="color_red"> PROPRIÉTÉS</span></h2>
+        <div class="line_1"></div>
+        <div class="line_2"></div>
+        <div class="line_3"></div>
+      </div>
+    </div>
+    <div class="row" *ngFor="let item of listeimmobrechercher">
+   <div class="property-list-list" data-target="Residential">
+        <div class="col-xs-12 col-sm-8 col-md-8 property-list-list-info">
+<div class="row">
+          <div class="col-xs-12 col-sm-6 col-md-6">
+              <h1 class="titre">{{nomType}}</h1>
+
+            <p class="recent-properties-price">{{item.adresse}}</p>
+            <span class="prix">{{item.prix}} dt</span>
+            <p>{{item.description}}</p>
+            <p>Logement:  <button type="submit" class="btn btn-success"  (click)="changeStatus(item)"[disabled]="item.logementstatus==false">{{item.logement}}</button>
+            </p>
+          </div>
+     <div class="col-xs-12 col-sm-6 col-md-6 property-list-list-facility">
+            <ul>
+              <li class="left pt-5">Surface:{{item.surface}}m²</li>
+            </ul>
+
+            <ul>
+              <li class="left">Distance:{{item.distance}}km</li>
+            </ul>
+            <ul>
+              <li class="left">Age:{{item.age}}</li>
+            </ul>
+
+          </div>
+</div>
+        </div>
+      </div>  <div class="col-xs-12 col-sm-4 col-md-4 property-list-list-image">
+      <img src="assets/fomdImm/fond1.jpg" alt="recent-properties-1" class="img-responsive">
+    </div>
+
+    </div>
+  </div>
+    </section>
+<app-footer></app-footer>

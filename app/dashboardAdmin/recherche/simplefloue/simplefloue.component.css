@@ -1,0 +1,41 @@
+select.form-select.mt-4 {
+  width: 494px;
+  margin-inline: -15px;
+} .keyword-input {
+  border: 1px solid rgba(229, 229, 229, 1);
+  height: 40px;
+  border-radius: 0;
+  padding-left: 10px;
+   width: 215px;}
+
+select.selectpicker {
+  padding-bottom: 10px;
+  padding-top: 8px;
+  margin-left: -11px;
+
+  width: 171px;}
+select#cars {
+  width: 186px;
+  padding-top: 8px;
+  margin-left: 124px;
+  padding-bottom: 10px;}
+.btn_fill1,.btn_fill2,.btn_fill3 {
+
+  font-weight: 700 ;
+  text-align: center;
+  padding: 12px 40px;
+  text-transform: uppercase;
+  border-radius: 4px;
+  display: inline-block;
+  margin-left: -116px;
+  margin-right: 128px;}
+.btn_fill3{background: #dc3545; margin-inline: -11px;}
+.btn_fill2{background: #ffc107;}
+.btn_fill1 {
+  background: #17a2b8;
+}
+.query-submit-button.mt-4 {
+  margin-inline: -13px;
+}
+
+.pace-progress-color-danger{color: red;}

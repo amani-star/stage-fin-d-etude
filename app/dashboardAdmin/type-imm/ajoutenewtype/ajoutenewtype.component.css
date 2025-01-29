@@ -1,0 +1,20 @@
+.form-groups{
+  margin-inline: 25%;
+  margin-top: 5%;
+  background-color: #f7f8f900;
+  width: 764px;
+  left: -3%;}
+.card-header{
+  margin-inline: 3%;
+  margin-top: 0%;
+  box-shadow: 18px 8px 3px 1px rgb(0 0 255 / 20%);
+}
+.card {
+margin-inline: 214px;
+margin-top: 13px;}
+.form-control {width: 44%;
+  margin-inline: -24%}
+.label{margin-inline: -150px;}
+.card-footer { background-color: initial;
+  margin-inline: 99px;
+}

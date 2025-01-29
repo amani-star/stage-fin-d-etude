@@ -1,0 +1,159 @@
+<!--===== HEADER =====-->
+<header id="main_header">
+
+  <!--===== HEADER TOP =====-->
+  <div id="header-bottom">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-2 hidden-xs hidden-sm"><img src="assets/logo.png" alt="logo" width="50%"/></div>
+        <div class="col-md-10 col-sm-12 col-xs-12">
+          <div class="row">
+            <div class="get-tuch text-left top20 col-md-4 col-sm-4">
+              <i class="fa fa-phone"></i>
+              <ul>
+                <li>
+                  <h4>Téléphone</h4>
+                </li>
+                <li>
+                  <p>26 433 293</p>
+                </li>
+              </ul>
+            </div>
+
+            <div class="get-tuch text-left top20  col-md-4 col-sm-4">
+              <i class="fa fa-map-marker" aria-hidden="true"></i>
+              <ul>
+                <li>
+                  <h4>Adresse</h4>
+                </li>
+                <li>
+                  <p>Medenine</p>
+                </li>
+              </ul>
+            </div>
+
+            <div class="get-tuch text-left top20  col-md-4 col-sm-4">
+              <i class="fa fa-envelope" aria-hidden="true"></i>
+              <ul>
+                <li>
+                  <h4>Email</h4>
+                </li>
+                <li>
+                  <p>AdminAdmin@gmail.com</p>
+                </li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</header>
+
+
+<div class="page-title page-main-section parallaxie" style="background: url('assets/home/titlebg.jpg');">
+  <div class="container padding-bottom-top-120 text-uppercase text-center">
+    <div class="main-title">
+      <h1>Connexion et Inscription</h1>
+      <div class="line_4"></div>
+      <div class="line_5"></div>
+      <div class="line_6"></div>
+      <a routerLink="">Accueil</a><span><i class="fa fa-angle-double-right" aria-hidden="true"></i></span><a  routerLink="\login">Connexion et Inscription</a>
+    </div>
+  </div>
+</div>
+<!--===== LOGIN =====-->
+<section id="login" class="padding">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <div class="profile-login mt-5">
+          <div class="login_detail">
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs" role="tablist">
+              <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Login</a></li>
+              <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Register</a></li>
+            </ul>
+            <!-- Tab panes -->
+            <div class="tab-content padding_b40 padding_t40">
+              <div role="tabpanel" class="tab-pane fade show active" id="home">
+                <h2>Connexion</h2>
+                <div class="agent-p-form">
+                  <div class="row">
+                    <form class="callus">
+                      <div class="col-md-12">
+                        <div class="single-query">
+                          <input type="text" class="keyword-input mb-3" placeholder="E-mail" name="email"  [(ngModel)]="email" required>
+                        </div>
+                        <div class="single-query">
+                          <input type="password" class="keyword-input" placeholder="Mot de passe" name="password" [(ngModel)]="passwordlogin" required>
+                        </div>
+                      </div>
+
+
+                      <div class="col-md-12 col-sm-12 col-xs-12 text-center">
+                        <div class="query-submit-button">
+                          <button type="submit" class="btn_fill mt-5" (click)="connect()">Connexion</button>
+                        </div>
+                      </div>
+                      <div class="alert alert-danger" role="alert" *ngIf="check==true">
+                        vous n'avez pas   un compter crée
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+              <div role="tabpanel" class="tab-pane fade" id="profile">
+                <h2>Creer un compte</h2>
+                <div class="agent-p-form">
+                  <div class="row">
+                    <form class="callus" #f=ngForm (ngSubmit)="creeCompter(f.value)">
+                      <div class="col-md-12">
+                        <div class="single-query">
+                          <input type="text" class="keyword-input mb-3" placeholder="Nom"   name="nom" [(ngModel)]="nom" required>
+                        </div>
+                        <div class="single-query">
+                          <input type="text" class="keyword-input mb-3" placeholder="Prénom"    name="prenom" [(ngModel)]="prenom" required>
+                        </div>
+
+                        <div class="single-query">
+                          <input type="email" class="keyword-input mb-3" placeholder="E-mail"  name="mail" [(ngModel)]="mail" required>
+                        </div>
+
+                        <div class="single-query">
+                          <input type="password" class="keyword-input mb-3" placeholder="Mot de passe" required name="password" [(ngModel)]="password" required>
+                        </div>
+                        <div class="single-query">
+                          <input type="text" class="keyword-input mb-3" placeholder="Téléphone" required name="telephone" [(ngModel)]="telephone" required>
+                        </div>
+                      </div>
+
+<div class="row"><div class="col-md-6">
+                      <label class="text-white">Choisir votre role</label> <select class="selectpicker" data-live-search="true" required name="role" [(ngModel)]="role" >
+                        <option value="" disabled selected>Choisir votre role</option>
+                        <option value="Proprietaire fond" >Proprietaire fond</option>
+                      <option value="admin" >Administrateur</option>
+                        <option value="patient" >Client</option>
+                      </select>
+</div>
+                        <div class="col-md-6 col-sm-6 col-xs-12 text-center">
+                          <div class="query-submit-button">
+                            <button type="submit" class="btn_fill mt-4"  [disabled]="activebutton"  >Ajoute</button>
+                          </div>
+                        </div>
+</div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--===== #/LOGIN =====-->
+<app-footer></app-footer>

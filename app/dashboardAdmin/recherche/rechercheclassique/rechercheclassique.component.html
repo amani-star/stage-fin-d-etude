@@ -1,0 +1,135 @@
+<div class="d-flex justify-content-center">
+  <div class="property-query-area">
+    <div class="row">
+      <div class="col-md-12">
+        <h1 class="text-uppercase bottom40 text-center pt-4"  >Recherche <span class="color_red">Classique</span></h1>
+      </div>
+    </div>
+    <form >
+      <div class="col-md-12">
+        <div class="row">
+          <div class="col-md-12">
+        <div class="single-query">
+
+        </div>
+          </div>
+        </div>
+      </div>
+    </form>
+    <div class="row search-2">
+        <form >
+          <div class="col-md-12">
+            <div class="row">
+              <table>
+                <tr>   <td>  <select class="selectpicker mt-4" data-live-search="true"  name="selectlogement" [(ngModel)]="selectlogement">
+                  <option value="" disabled selected>type de Logement</option>
+                  <option value="louer" >louer</option>
+                  <option value="acheter" >acheter</option>
+                </select></td>
+                  <td>  <select  name="cars" id="cars" [(ngModel)]="selectedOption" class="type mt-4" >
+                    <option value="" disabled selected>Le nom des types</option>
+                    <option *ngFor="let type of listeType" [value]="type.documentId" >
+                      {{type.nom}}
+                    </option>
+                  </select></td>
+                </tr>
+
+              </table>
+            </div>
+          </div>
+        <div class="col-md-12">
+          <div class="row">
+            <div class="col-md-6 col-sm-6">
+              <div class="input-group">
+                <input type="number" class="keyword-input"  name="prixmax" [(ngModel)]="prixmax" placeholder="Prix Max ">
+                <span class="input-group-text">dt</span>
+              </div>
+            </div>
+            <div class="col-md-6 col-sm-6">
+              <div class="input-group pb-4">
+                <input type="number" class="keyword-input " name="prixmin" placeholder="Prix Min" [(ngModel)]="prixmin">
+                <span class="input-group-text text-center">dt</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-12">
+          <div class="row">
+            <div class="col-md-6 col-sm-6">
+              <div class="input-group pb-4">
+                <input type="number" class="keyword-input" name="agemax"  placeholder="Age Max" [(ngModel)]="agemax">
+                <span class="input-group-text">Année</span>
+              </div>
+            </div>
+            <div class="col-md-6 col-sm-6">
+              <div class="input-group pb-4">
+                <input type="number" class="keyword-input"  name="agemin" placeholder="Age Min " [(ngModel)]="agemin">
+                <span class="input-group-text">Année</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-12">
+          <div class="row">
+            <div class="col-md-6 col-sm-6">
+              <div class="input-group pb-4">
+                <input type="number" class="keyword-input" name="distancemax" placeholder="Distance Max " [(ngModel)]="distancemax">
+                <span class="input-group-text" title="à partir du centre de votre ville">km</span>
+              </div>
+            </div>
+            <div class="col-md-6 col-sm-6">
+              <div class="input-group pb-4">
+                <input type="number" class="keyword-input" name="distancemin"placeholder="Distance min" [(ngModel)]="distancemin">
+                <span class="input-group-text" title="à partir du centre de votre ville" >km</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="d-grid gap-2 col-6 mx-auto">
+        <tr>  <div class="query-submit-button ">
+          <td>  <button type="submit" class="btn_fill1 black" (click)="rechcheFonImmoblie()">Recherche</button>
+          </td>
+         <!-- <td>            <button type="submit" class="btn_fill2 " (click)="actualiserechercher()">Actualisé</button>
+          </td>-->
+        <td>            <button type="submit" class="btn_fill3 black" (click)="annulerrechercher()">Actualisé</button>
+        </td>
+        </div></tr>
+
+        </div>
+        </form>
+    </div>
+  </div>
+</div>
+<!-- Striped table start -->
+<table class="table table-bordered table-striped mt-4">
+  <thead>
+  <tr>
+<th>Nom de Type</th>
+
+    <th>Prix</th>
+    <th>Proximite</th>
+    <th>Ancienneté</th>
+    <th>Type de logement</th>
+    <th>Action</th>
+
+  </tr>
+  </thead>
+  <tbody >
+  <tr *ngFor="let item of listeimmobrechercher">
+    <td><span>{{nomType}}</span></td>
+    <td><span>{{item.prix}}</span></td>
+    <td><span>{{item.distance}}</span></td>
+    <td><span>{{item.age}}</span></td>
+    <td><span>{{item.logement}}</span></td>
+    <td><button type="submit" class="btn btn-success"  routerLink="/detailstype/{{item.fondId}}">Détails</button>
+      <button type="submit" class="btn btn-success"  (click)="changeStatus(item)"[disabled]="item.logementstatus==false">{{item.logement}}</button>
+    </td>
+
+
+
+  </tr>
+  </tbody>
+</table>
+<!-- Striped table End -->
+

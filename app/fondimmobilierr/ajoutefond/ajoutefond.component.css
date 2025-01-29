@@ -1,0 +1,39 @@
+.color_red {
+  color: #ed2a28;}
+h3.text-uppercase.bottom40 {
+  margin-top: 73px;
+  margin-left: -250px;
+  margin-bottom: 31px;}
+select.selectpicker {
+  /* margin-inline: -10px; */
+  /* padding-inline: 3px; */
+  margin-bottom: 19px;
+  margin-top: 15px;
+  padding-top: 8px;
+  padding-bottom: 11px;
+  margin-left: -61px;
+  width: 310px;}
+input.keyword-input {
+  margin-bottom: 16px;
+  margin-inline: -59px;
+  width: 310px;
+  padding-top: 11px;
+  padding-bottom: 13px;}
+textarea.text {
+  margin-left: -58px;
+  padding-top: 10px;
+  width: 777px;
+  padding-bottom: 138px;}
+.text-1 {
+  color: white;}
+span.input-group-text {
+  width: 63px;
+  /* padding-bottom: 17px; */
+  padding-top: -21px;
+  height: 48px;
+}
+.card-footer {
+  padding: -2.25rem 0.25rem;
+  /* color: #251616; */
+  background: white;
+  margin-inline: 217px;}

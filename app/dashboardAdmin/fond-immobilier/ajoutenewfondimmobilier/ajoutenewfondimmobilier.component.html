@@ -1,0 +1,93 @@
+<section class="property-details padding">
+  <div class="container">
+
+    <div class="row">
+
+      <div class="col-md-1"></div>
+
+      <div class="col-md-10 col-sm-12 col-xs-12">
+
+        <div class="property-query-area">
+
+          <div class="row">
+            <div class="col-md-12">
+              <h3 class="text-uppercase  bottom40 text-center">Ajoute nouveau  <span class="color_red">fond immobilier</span></h3>
+            </div>
+          </div>
+
+          <form class="findus" #f=ngForm (ngSubmit)="onsavefondimmobilier(f.value)">
+
+            <div class="row">
+
+              <div class="col-md-6 col-sm-6 col-xs-12">
+                <div class="single-query">
+                  <select class="selectpicker" data-live-search="true"  name="logement" [(ngModel)]="selectlogement">
+                    <option value="" disabled selected>type de Logement</option>
+                    <option value="louer" >louer</option>
+                    <option value="acheter" >acheter</option>
+                  </select>
+                  <select class="selectpicker" data-live-search="true"  name="documentId" [(ngModel)]="selectedOption">
+                    <option value="" disabled selected>Le nom des types</option>
+                    <option *ngFor="let type of listeType" [value]="type.documentId" >
+                      {{type.nom}}
+                  </select>
+                </div>
+              </div>
+
+              <div class="col-md-6 col-sm-6 col-xs-12">
+                <div class="single-query">
+                  <input type="text" class="keyword-input" placeholder="Adresse" ngModel name="adresse">
+                </div>
+              </div>
+
+            </div>
+
+            <div class="row">
+              <div class="col-md-6 col-sm-6">
+                <div class="input-group pb-4">
+                  <input type="text" class="keyword-input" placeholder="Age" ngModel name="age">
+                  <span class="input-group-text" >Annee</span>
+
+                </div>
+              </div>
+              <div class="col-md-6 col-sm-6">
+                <div class="input-group pb-4">
+                  <input type="text" class="keyword-input" placeholder="Distance" ngModel name="distance">
+                  <span class="input-group-text" >Km</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-6 col-sm-6">
+                <div class="single-query">
+                  <input type="text" class="keyword-input" placeholder="Surface" ngModel name="surface">
+                </div>
+              </div>
+              <div class="col-md-6 col-sm-6">
+                <div class="input-group pb-4">
+                  <input type="text" class="keyword-input" placeholder="prix" ngModel name="prix">
+                  <span class="input-group-text" >DT</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+
+              <div class="col-md-12">
+                <div class="single-query">
+                  <textarea type="" class="text" placeholder="Description" ngModel name="description"></textarea>
+                </div>
+              </div>
+            </div>
+            <div class="card-footer">
+              <button type="submit" class="btn btn-info"> Save</button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="col-md-1"></div>
+
+    </div>
+  </div>
+</section>

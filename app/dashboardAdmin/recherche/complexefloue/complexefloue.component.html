@@ -1,0 +1,122 @@
+<div class="d-flex justify-content-center" xmlns="http://www.w3.org/1999/html">
+  <div class="property-query-area">
+    <div class="row">
+      <div class="col-md-12 pt-4">
+        <h1 class="text-uppercase bottom40 text-center pt"  >Recherche <span class="pace-progress-color-danger">Flexible et floue(complexe)</span></h1>
+      </div>
+    </div>
+    <form >
+      <div class="col-md-12">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="single-query">
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+    <div class="row search-2">
+      <form >
+        <div class="col-md-12">
+          <div class="row">
+            <table>
+
+              <tr>   <td>  <select class="selectpicker mt-4" data-live-search="true"  name="selectlogement" [(ngModel)]="selectlogement" >
+                <option value="" disabled selected>type de Logement</option>
+                <option value="louer" >louer</option>
+                <option value="acheter" >acheter</option>
+              </select></td>
+                <td>  <select  name="cars" id="cars" [(ngModel)]="selectedOption" class="type mt-4" >
+                  <option value="" disabled selected>Le nom des types</option>
+                  <option *ngFor="let type of listeType" [value]="type.documentId" >
+                    {{type.nom}}
+                  </option>
+                </select></td>
+              </tr>
+
+            </table>
+          </div>
+        </div>
+
+
+        <table border="0">
+          <tr>  <td><select class="form-select mt-4" aria-label="Default select example"  name="prix" [(ngModel)]="prix">
+            <option value="" disabled selected>Terme linguistique de prix</option>
+            <option value="Non cher">Non cher</option>
+            <option value="Assez cher">Assez cher</option>
+            <option value="Cher">Cher</option>
+          </select></td>
+          </tr>
+          <tr>  <select class="form-select mt-4" aria-label="Default select example" name="distance" [(ngModel)]="distance" >
+            <option value="" disabled selected>Terme linguistique proximite</option>
+            <option value="Proche">Proche</option>
+            <option value="Assez proche">Assez proche</option>
+            <option value="Loin">Loin</option>
+          </select>
+          </tr>
+          <tr>  <select class="form-select mt-4" aria-label="Default select example"  name="age" [(ngModel)]="age">
+            <option value="" disabled selected>Terme linguistique ancienneté</option>
+            <option value="Nouvelle">Nouvelle</option>
+            <option value="Assez ancienneté">Assez ancienneté</option>
+            <option value="Ancienneté">Ancienneté</option>
+          </select>
+          </tr>
+        </table>
+        <table >
+    <tr> <td><div class="form-check mt-4">
+          <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" (change)="onItemchange('et')">
+          <label class="form-check-label" for="flexRadioDefault1">
+            ET
+          </label>
+        </div></td>
+   <td> <div class="form-check mt-4">
+          <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked (change)="onItemchange('OU')">
+          <label class="form-check-label" for="flexRadioDefault2">
+            OU
+          </label>
+        </div></td>  </tr>
+        </table>
+      </form>
+    </div>
+    <div class="d-grid gap-2 col-6 mx-auto">
+      <tr>  <div class="query-submit-button mt-4 ">
+        <td>  <button type="submit" class="btn_fill1 black" (click)="rechcheflouesimpleFonImmoblie()">Recherche</button>
+        </td>
+        <!--<td>            <button type="submit" class="btn_fill2 " (click)="actualiserechercherFloueSimple()">Actualisé</button>
+        </td>-->
+        <td>            <button type="submit" class="btn_fill3 black" (click)="annulerrechercherFloueSimple()">Actualisé</button>
+        </td>
+      </div></tr>
+
+    </div>
+  </div>
+</div>
+<!-- Striped table start -->
+<table class="table table-bordered table-striped mt-4" >
+  <thead>
+  <tr>
+    <th>Nom de Type</th>
+    <th>Prix</th>
+    <th>Proximite</th>
+    <th>Ancienneté</th>
+    <th>Type de logement</th>
+    <th>Action</th>
+  </tr>
+  </thead>
+  <tbody >
+  <tr *ngFor="let item of listeimmobrechercher">
+    <td><span>{{nomType}}</span></td>
+    <td><span>{{item.prix}}</span></td>
+    <td><span>{{item.distance}}</span></td>
+    <td><span>{{item.age}}</span></td>
+    <td><span>{{item.logement}}</span></td>
+    <td><button type="submit" class="btn btn-success"  routerLink="/dashboardAdmin/detailcomplexe/{{item.fondId}}" >Détails</button>
+      <button type="submit" class="btn btn-success"  (click)="changeStatus(item)"[disabled]="item.logementstatus==false">{{item.logement}}</button>
+    </td>
+
+
+  </tr>
+  </tbody>
+</table>
+<!-- Striped table End -->

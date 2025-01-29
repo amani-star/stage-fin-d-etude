@@ -1,0 +1,81 @@
+.about-sev-tag h4 {
+  font-style: italic;
+  font-weight: normal;
+  margin-bottom: 15px;
+  font-size: 20px;
+}
+.about-sev-tag ul{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.about-sev-tag ul li {
+  font-weight: 400;
+  font-style: italic;
+  line-height: 32px;
+  display: inline-block;
+  width: 46%;
+}
+.line_1,
+.line_2,
+.line_3,
+.line_1-1,
+.line_2-2,
+.line_3-3{
+  display: block;
+  height: 1px;
+  background: #dbdbdb;
+  position: relative;
+}
+.line_1 {
+  width: 200px;
+  margin-top: 10px;
+}
+.line_2 {
+  width: 150px;
+  margin-top: 5px;
+}
+.line_3 {
+  width: 100px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+}
+.line_1-1 {
+  width: 200px;
+  left: 0;
+  margin: 10px auto 5px;
+  right: 0;
+  text-align: center;
+}
+.line_2-2 {
+  width: 150px;
+  margin:0 auto 5px;
+  right: 0;
+  text-align: center;
+}
+.line_3-3 {
+  width: 100px;
+  margin:0 auto 25px;
+  right: 0;
+  text-align: center;
+}
+.about-sev-tag .founder-text {
+  padding-left: 40px;
+  position: relative;
+  border-left: 2px solid #ddd;
+  padding-top: 32px;
+  padding-bottom: 0px;
+}
+.about-sev-tag .founder-text::before {
+  position: absolute;
+  top: 0;
+  left: 10px;
+  font-family: "FontAwesome";
+  content: "\f10d";
+  color: #f0f0f0;
+  font-size: 22px;
+}
+.imgservice:hover > img {
+  -webkit-transform: translateY(-10px);
+  transform: translateY(-10px);
+}

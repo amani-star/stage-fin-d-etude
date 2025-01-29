@@ -1,0 +1,93 @@
+.line_1 {
+  width: 200px;
+  margin-top: 10px;}
+.line_1, .line_2, .line_3/*, .line_1-1, .line_2-2, .line_3-3*/ {
+  display: block;
+  height: 1px;
+  background: #dbdbdb;
+  position: relative;}
+.line_2 {
+  width: 150px;
+  margin-top: 5px;}
+.line_3 {
+  width: 100px;
+  margin-top: 5px;
+  margin-bottom: 15px;}
+#contact-us .single-query > input[type="text"] {
+  width: 100%;
+}
+
+.single-query .keyword-input {
+  border: 1px solid rgba(229, 229, 229, 1);
+  height: 40px;
+  border-radius: 0;
+  padding-left: 10px;
+  width: 100%;
+  background: #fff;}
+textarea#message {
+  padding-top: 10px;
+  padding-bottom: 153px;
+  width: 724px;
+  /* height: 214px; */
+  margin-top: 4px;
+  margin-bottom: 9px;}
+/**/
+
+.dark_border:hover,
+.dark_border:focus,
+a.back-to:hover,
+a.back-to:focus,
+.btn_fill {
+  background: #f34242;
+  color: #000000;
+}
+.btn_fill {
+  font-weight: 700 !important;
+  text-align: center;
+}
+.btn_fill:hover,
+.btn_fill:focus,
+.btn_brd:hover,
+.btn_brd:focus {
+  background: #ff0000;
+  color: #000000;
+}
+button {
+  border: none;
+  box-shadow: none;}
+.btn_fill {
+  padding: 12px 40px;
+  text-transform: uppercase;
+  border-radius: 4px;
+  display: inline-block;}
+#contact-us .agetn-contact-2 p {
+  color: #1f1f1f;
+  font-size: 15px !important;
+  text-align: left;}
+.pt-4, .py-4 {
+  margin-inline: 32px;}
+.socials li {
+  display: inline-block;
+}
+.socials li a {
+  color: #dbdbdb;
+  border: 1px solid #dbdbdb;
+  display: block;
+  font-size: 14px;
+  height: 32px;
+  line-height: 30px;
+  width: 32px;
+  margin: 5px 5px 5px 0;
+  text-align: center;
+}
+.socials.dark li a {
+  color: #676767;
+  border-color: #676767;
+}
+.socials li a:hover,
+.socials li a:focus {
+  color: #ff0000;
+}
+
+button#button{
+            margin-inline: 79px;}

@@ -1,0 +1,34 @@
+<div class="container pt-5">
+  <button class="btn btn-danger" (click)="ajoutenouveautype()">
+    <i class="fa fa-plus-square" aria-hidden="true" ></i> Ajouter type</button><br><br>
+<!--<form #f="ngForm" (ngSubmit)="onRecherche(f.value)">-->
+  <div>
+    <!--<label>Keyword</label>-->
+    <!--<input type="text" name="keyword" [(ngModel)]="filters.keyword" (input)="filterType()">-->
+  <!--<button type="submit" class="btn btn-primary"> cherche<i></i></button>-->
+    <input type="search" class="form-control" [(ngModel)]="filter_data">
+  </div>
+    <table class="table table-bordered table-striped">
+    <thead>
+    <tr>
+      <th>Nom</th>
+      <th class="text-center">Action</th>
+    </tr>
+    </thead>
+    <tbody *ngIf="(type | filter: filter_data).length > 0; ">
+    <tr *ngFor="let item of type | filter: filter_data; let i = index">
+      <td><span>{{item.nom}}</span></td>
+      <td>
+        <a  class="btn btn-danger" (click)="deleteType(item)"> Delete</a>
+
+      <a  class="btn btn-success" (click)="ModifierType(item)"> Modifier</a>
+      </td>
+    </tr>
+    </tbody>
+
+  </table>
+
+</div>
+
+
+

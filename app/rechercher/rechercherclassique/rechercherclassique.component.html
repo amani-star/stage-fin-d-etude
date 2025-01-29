@@ -1,0 +1,167 @@
+<app-header></app-header>
+<!-- PAGE TITLE -->
+<div class="page-title page-main-section parallaxie" style="background: url('assets/home/titlebg.jpg');">
+  <div class="container padding-bottom-top-120 text-uppercase text-center">
+    <div class="main-title">
+
+      <h1>Recherche Classique</h1>
+      <h5>des fond immobilier</h5>
+      <div class="line_4"></div>
+      <div class="line_5"></div>
+      <div class="line_6"></div>
+      <a routerLink="/proprietaire">Accueil</a>
+      <span><i class="fa fa-angle-double-right" aria-hidden="true"></i></span>
+      <a  routerLink="/rechercheclassique">Recherche Classique</a>
+    </div>
+  </div>
+</div>
+<!-- PAGE TITLE -->
+
+<!-- LISTING STYLE-->
+<section id="agent-p-2" class="listing-1 bg_light padding_top">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <h2 class="uppercase">Listes <span class="color_red">des fonds</span></h2>
+        <div class="line_1"></div>
+        <div class="line_2"></div>
+        <div class="line_3"></div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-8 col-sm-12 col-xs-12">
+        <form class="findus">
+
+          <div class="row pt-3 ">
+
+            <div class="col-md-6 col-sm-6" *ngFor="let item of fondImmobilier">
+              <div class="property_item heading_space">
+                <div class="image">
+                  <img src="assets/fomdImm/fond1.jpg" alt="" class="img-responsive" width="100%" *ngIf="item.documentId === '1'">
+                  <img src="assets/fomdImm/depot.JPG" alt="" class="img-responsive" width="100%"  *ngIf="item.documentId === '2'">
+                  <img src="assets/fomdImm/appartement.jpg" alt="" class="img-responsive"  width="100%"  *ngIf="item.documentId === '3'">
+                  <img src="assets/fomdImm/studioo.jpg" alt="" class="img-responsive"  width="100%"  *ngIf="item.documentId === '4'">
+
+                <!--  <div class="overlay">
+                    <div class="centered"><a class="link_arrow white_border" href="">View Detail</a></div>
+                  </div>
+                  <div class="feature"><span class="tag">Featured</span></div>-->
+                  <div class="property_meta">
+                    <span><i class="fa fa-object-group"></i>{{item.surface}} m²</span>
+                    <span><i class="fa fa-map-marker"></i>{{item.distance}} KM</span>
+                    <span><i class="	fas fa-search-plus 	"></i>{{item.age}} Année</span>
+                  </div>
+                </div>
+                <div class="proerty_content">
+                  <div class="proerty_text">
+                   <div class="row">
+                     <div class="col-md-6 ">
+                   <div *ngFor="let type of listeType">
+                      <h2 class="text-left">  <span *ngIf="type.documentId === item.documentId">{{type.nom}}</span>
+                      </h2>
+                    </div></div>
+                     <div class="col-md-6 "> <h2 class="text-right">{{item.logement}}</h2></div></div>
+                    <span class="bottom10 descriptionText">{{item.description}}</span>
+                    <p><strong class="pt-5">{{item.prix}} DT</strong></p>
+                  </div>
+                  <div class="favroute clearfix">
+                    <h4 class="text-center p-2" routerLink="/detailfond/{{item.fondId}}">Plus des détails</h4>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="col-md-4 colsm-4 col-xs-12">
+        <div class="property-query-area padding-all20">
+          <div class="row">
+            <div class="col-md-12">
+              <h1 class="text-uppercase bottom40 text-center pt-4"  >Recherche <span class="color_red">Classique</span></h1>
+            </div>
+          </div>
+          <div class="row p-1 pb-5">
+              <div class="col-md-12">
+                <div class="single-query">
+                  <table>
+                    <tr>
+                      <td>  <select class="selectpicker mt-4" data-live-search="true"  name="selectlogement" [(ngModel)]="selectlogement">
+                      <option value="" disabled selected>type de Logement</option>
+                      <option value="louer" >louer</option>
+                      <option value="acheter" >acheter</option>
+                    </select></td>
+                     <td> <select  name="cars" id="cars" [(ngModel)]="selectedOption" >
+                    <option value="" disabled selected>Le nom des types</option>
+                    <option *ngFor="let type of listeType" [value]="type.documentId" >
+                      {{type.nom}}
+                    </option>
+                  </select></td> </tr></table>
+                </div>
+              </div>
+              <div class="col-md-12">
+                <div class="row">
+                  <div class="col-md-6 col-sm-6">
+                    <div class="single-query">
+                      <input type="number" class="keyword-input " name="prixmax" placeholder="PrixMax" [(ngModel)]="prixmax" >
+                      <span class="input-group-text text-center">Dt</span>                    </div>
+                  </div>
+                  <div class="col-md-6 col-sm-6">
+                    <div class="single-query">
+                      <input type="number" class="keyword-input " name="prixmin" placeholder="Prix Min" [(ngModel)]="prixmin" >
+                      <span class="input-group-text text-center">Dt</span>                  </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-12">
+                <div class="row">
+                  <div class="col-md-6 col-sm-6">
+                    <div class="single-query">
+                      <input type="number" class="keyword-input " name="agemin" placeholder="Age Max"  [(ngModel)]="agemax">
+                      <span class="input-group-text text-center">Annee</span>                    </div>
+                  </div>
+                  <div class="col-md-6 col-sm-6">
+                    <div class="single-query">
+                      <input type="number" class="keyword-input " name="agemin" placeholder="Age Min"  [(ngModel)]="agemin">
+                      <span class="input-group-text text-center">Année</span>                  </div>
+                  </div>
+                </div>
+              </div>
+            <div class="col-md-12">
+              <div class="row">
+                <div class="col-md-6 col-sm-6">
+                  <div class="single-query">
+                    <input type="number" class="keyword-input " name="distancemin" placeholder="Distance Max" [(ngModel)]="distancemax">
+                    <span class="input-group-text text-center" title="à partir du centre de votre ville">Km</span>                    </div>
+                </div>
+                <div class="col-md-6 col-sm-6">
+                  <div class="single-query">
+                    <input type="number" class="keyword-input " name="distancemin" placeholder="Distance Min" [(ngModel)]="distancemin">
+                    <span class="input-group-text text-center" title="à partir du centre de votre ville">Km</span>                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-12 text-center">
+              <div class="query-submit-button top30">
+
+                <tr>  <div class="query-submit-button mt-4">
+                  <td>  <button type="submit" class="btn_fill1 black" routerLink="/rechercherclass/{{selectlogement}}/{{selectedOption}}/{{prixmax}}/{{prixmin}}/{{agemax}}/{{agemin}}/{{distancemax}}/{{distancemin}}" >Recherche</button>
+                  </td>
+                <!--  <td>            <button type="submit" class="btn_fill2 " (click)="actualiserechercher()">Actualisé</button>
+                  </td>-->
+                  <td>            <button type="submit" class="btn_fill3 black" (click)="annulerrechercher()">Actualisé</button>
+                  </td>
+                </div></tr>
+
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- LISTING -->
+<app-footer></app-footer>

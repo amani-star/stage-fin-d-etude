@@ -1,0 +1,181 @@
+<!--===== HEADER =====-->
+<header id="main_header">
+
+  <!--===== HEADER TOP =====-->
+  <div id="header-bottom">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-2 hidden-xs hidden-sm"><img src="assets/logo.png" alt="logo" width="50%"/></div>
+        <div class="col-md-10 col-sm-12 col-xs-12">
+          <div class="row">
+            <div class="get-tuch text-left top20 col-md-4 col-sm-4">
+              <i class="fa fa-phone"></i>
+              <ul>
+                <li>
+                  <h4>Téléphone</h4>
+                </li>
+                <li>
+                  <p>26 433 293</p>
+                </li>
+              </ul>
+            </div>
+
+            <div class="get-tuch text-left top20  col-md-4 col-sm-4">
+              <i class="fa fa-map-marker" aria-hidden="true"></i>
+              <ul>
+                <li>
+                  <h4>Adresse</h4>
+                </li>
+                <li>
+                  <p>Medenine</p>
+                </li>
+              </ul>
+            </div>
+
+            <div class="get-tuch text-left top20  col-md-4 col-sm-4">
+              <i class="fa fa-envelope" aria-hidden="true"></i>
+              <ul>
+                <li>
+                  <h4>Email</h4>
+                </li>
+                <li>
+                  <p>amanithameur@gmail.com</p>
+                </li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--===== #/HEADER TOP =====-->
+  <div class="container-fluid">
+    <div class="row">
+
+      <div class="col-md-12 col-sm-12 col-xs-12">
+        <!--nav-->
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+          <div class="container-fluid">
+
+            <button class="navbar-toggler" type="button" (click)="navbarCollapsed = !navbarCollapsed" [attr.aria-expanded]="!navbarCollapsed" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" [ngbCollapse]="navbarCollapsed" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link active text-light" aria-current="page" routerLink="">Accueil</a>
+                </li>
+                <!--      <li class="nav-item">
+                        <a class="nav-link text-light" href="#">Offres</a>
+                      </li>-->
+                <li class="nav-item dropdown">
+                  <a href="#." class="nav-link dropdown-toggle text-light" data-toggle="dropdown">Recherche</a>
+                  <ul class="dropdown-menu">
+                    <li><a href="/rechercherclassique" class="dropdown-item">Recherche Classique</a></li>
+                    <li><a href="/rechercherflouesimple" class="dropdown-item">Recheche flexible(simple)</a></li>
+                    <li><a href="" class="dropdown-item">Recherche flexible(complexe)</a></li>
+                  </ul>
+                </li>
+
+                <!-- <li class="nav-item">
+                    <a class="nav-link" routerLink="/bien">Bien</a>
+                  </li>-->
+                <!--li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Dropdown
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                </li-->
+              </ul>
+              <form class="d-flex">
+                <!-- <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">-->
+                <button class="btn btn btn-outline-danger text-light" type="submit"  routerLink="">Retour</button>
+
+              </form>
+              <form class="d-flex">
+                <!-- <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">-->
+                <button class="btn btn btn-outline-danger text-light" type="submit"  routerLink="/login">Connexion</button>
+              </form>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </div>
+
+</header>
+<!-- header-->
+<!-- PAGE TITLE -->
+<div class="page-title page-main-section parallaxie" style="background: url('assets/home/titlebg.jpg');">
+  <div class="container padding-bottom-top-120 text-uppercase text-center">
+    <div class="main-title">
+
+      <h1>Recherche Classique</h1>
+      <h5>des fond immobilier</h5>
+      <div class="line_4"></div>
+      <div class="line_5"></div>
+      <div class="line_6"></div>
+      <a routerLink="">Accueil</a>
+      <span><i class="fa fa-angle-double-right" aria-hidden="true"></i></span>
+      <a  routerLink="/rechercheclassiquevisiteur">Recherche Classique</a>
+    </div>
+  </div>
+</div>
+<!-- PAGE TITLE -->
+<section class="my_pro padding bg-color-gray">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 pt-4">
+        <h2 class="text-uppercase">MES <span class="color_red"> PROPRIÉTÉS</span></h2>
+        <div class="line_1"></div>
+        <div class="line_2"></div>
+        <div class="line_3"></div>
+      </div>
+    </div>
+
+    <div class="row" *ngFor="let item of listeimmobrechercher">
+      <div class="property-list-list" data-target="Residential">
+        <div class="col-xs-12 col-sm-8 col-md-8 property-list-list-info">
+          <div class="row">
+          <div class="col-xs-12 col-sm-6 col-md-6">
+            <h1 class="titre">{{nomType}}</h1>
+
+            <p class="recent-properties-price">{{item.adresse}}</p>
+            <span class="prix">{{item.prix}} dt</span>
+            <p>{{item.description}}</p>
+
+    <p> Logement: <button type="submit" class="btn btn-success"  (click)="envoyerAlerte()"[disabled]="item.logementstatus==false">{{item.logement}}</button>
+    </p>    </div>
+
+
+          <div class="col-xs-12 col-sm-6 col-md-6 property-list-list-facility">
+            <ul>
+              <li class="left pt-5">Surface:{{item.surface}}m²</li>
+            </ul>
+            <ul>
+              <li class="left">Distance:{{item.distance}}km</li>
+            </ul>
+            <ul>
+              <li class="left">Age:{{item.age}}</li>
+            </ul>
+          </div>
+        </div>
+        </div>
+      </div>  <div class="col-xs-12 col-sm-4 col-md-4 property-list-list-image">
+      <img src="assets/fomdImm/fond1.jpg" alt="recent-properties-1" class="img-responsive imgrech">
+    </div>
+
+    </div>
+  </div>
+</section>
+<app-footer></app-footer>

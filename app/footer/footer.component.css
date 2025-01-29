@@ -1,0 +1,67 @@
+.bgContact{padding: 40px 0 50px}
+#contact .get-tuch > ul{list-style: none;}
+ul.list-border {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.imglogo {
+  width: 62%;
+  margin: auto;
+  display: block;
+}
+.list-inline i{
+  margin-right: 5px;
+}
+.line1 {
+  float: left;
+  height: 5px;
+  width: 40px;
+}
+.line2 {
+  float: left;
+  height: 1px;
+  margin-top: 2px;
+  width: 78px;
+}
+ul.list.angle-double-right.list-border {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.widget .list-border li {
+  border-bottom: 1px dashed #404040;
+  transition: all 0.5s linear 0s;
+}
+.widget .list-border li:hover {
+  margin-left: 10px;
+}
+.widget ul.list li,
+.widget .post {
+  margin-bottom: 8px;
+  padding-bottom: 8px;
+}
+.border-bottom {
+  border-bottom: 1px solid #eeeeee;
+  margin-bottom: 65px;
+}
+
+ul.list li::before {
+  border: medium none;
+  content: "";
+  display: inline-block;
+  font-family: fontawesome;
+  font-size: 12px;
+  margin-right: 10px;
+  padding: 0;
+  color: #fff;
+}
+a {
+  text-decoration: none;
+}
+hr{
+  width: 60%;
+  display: block;
+  margin: auto;
+  margin-bottom: 2%;
+}

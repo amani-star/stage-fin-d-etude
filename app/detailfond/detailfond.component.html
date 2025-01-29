@@ -1,0 +1,63 @@
+<app-header></app-header>
+<!-- PROPERTY DETAILS -->
+<section class="property-details padding">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8">
+        <div class="row">
+
+            <div id="property-d-1" class="owl-carousel1 pt-4">
+              <div class="item"><img src="./assets/images/property-d-1-1.jpg" alt="image" /></div>
+
+            </div>
+
+
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="property-tab">
+              <!-- Nav tabs -->
+              <ul class="nav nav-tabs" role="tablist">
+                <li role="presentation" class="active"><a href="#description" aria-controls="description" role="tab" data-toggle="tab" class="fs-5">Description</a></li>
+                <li role="presentation"><a href="#coordonne" aria-controls="coordonne" role="tab" data-toggle="tab" class="fs-5">coordonné</a></li>
+                <li role="presentation"><a href="#Prix" aria-controls="Prix" role="tab" data-toggle="tab" class="fs-5">Prix</a></li>              </ul>
+              <!-- Tab panes -->
+              <div class="tab-content ">
+                <div role="tabpanel" class="tab-pane active" id="description">
+                  <h3 class=" bottom20 top10  pt-4 fs-5" >{{fondImmobilier.description}}</h3>
+
+                  <button class="btn_fill" type="submit " (click)="retoure()">Retour</button>
+
+
+                </div>
+                <div role="tabpanel" class="tab-pane" id="coordonne">
+                  <div class="col-md-6 col-sm-6 col-xs-12 property-d-table">
+                    <table class="table table-striped table-responsive">
+                      <tbody>
+                      <tr>
+                        <td class="fs-5"><b class="fs-5">Surface:</b> {{fondImmobilier.surface}}</td>
+                      </tr>
+                      <tr>
+                        <td class="fs-5"><b class="fs-5">Adresse:</b>{{fondImmobilier.adresse}} </td>
+                      </tr>
+                      <tr>
+                        <td class="fs-5"><b class="fs-5">Distance:</b>{{fondImmobilier.distance}} </td>
+                      </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                <div role="tabpanel" class="tab-pane" id="Prix">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <p class="fs-5">Prix:{{fondImmobilier.prix}} </p>
+                    </div>
+                  </div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div></div></div>
+</section>
+<app-footer></app-footer>
+

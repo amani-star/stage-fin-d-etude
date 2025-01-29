@@ -1,0 +1,102 @@
+<app-header></app-header>
+
+
+<div class="page-title page-main-section parallaxie" style="background: url('assets/home/titlebg.jpg');">
+  <div class="container padding-bottom-top-120 text-uppercase text-center">
+    <div class="main-title">
+      <h1>Login & Register</h1>
+      <h5>10 Years Of Experience!</h5>
+      <div class="line_4"></div>
+      <div class="line_5"></div>
+      <div class="line_6"></div>
+      <a routerLink="">Accueil</a><span><i class="fa fa-angle-double-right" aria-hidden="true"></i></span><a  routerLink="\edit">Connexion et Inscription</a>
+    </div>
+  </div>
+</div>
+<!--===== LOGIN =====-->
+<section id="login" class="padding">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <div class="profile-login mt-5">
+          <div class="login_detail">
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs" role="tablist">
+              <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Login</a></li>
+              <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Register</a></li>
+            </ul>
+            <!-- Tab panes -->
+            <div class="tab-content padding_b40 padding_t40">
+              <div role="tabpanel" class="tab-pane fade show active" id="home">
+                <h2>Connexion</h2>
+                <div class="agent-p-form">
+                  <div class="row">
+                    <form class="callus">
+                      <div class="col-md-12">
+                        <div class="single-query">
+                          <input type="text" class="keyword-input mb-3" placeholder="email" name="email"  [(ngModel)]="email" required>
+                        </div>
+                        <div class="single-query">
+                          <input type="password" class="keyword-input" placeholder="password" name="password" [(ngModel)]="passwordlogin" required>
+                        </div>
+                      </div>
+
+
+                      <div class="col-md-12 col-sm-12 col-xs-12 text-center">
+                        <div class="query-submit-button">
+                          <button type="submit" class="btn_fill mt-5" (click)="connect()">submit now</button>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+              <div role="tabpanel" class="tab-pane fade" id="profile">
+                <h2>Creer un compte</h2>
+                <div class="agent-p-form">
+                  <div class="row">
+                    <form class="callus" #f=ngForm (ngSubmit)="creeCompter(f.value)">
+                      <div class="col-md-12">
+                        <div class="single-query">
+                          <input type="text" class="keyword-input mb-3" placeholder="Nom" required  name="nom" [(ngModel)]="nom">
+                        </div>
+                        <div class="single-query">
+                          <input type="text" class="keyword-input mb-3" placeholder="Prenom"  name="prenom" [(ngModel)]="prenom">
+                        </div>
+
+                        <div class="single-query">
+                          <input type="text" class="keyword-input mb-3" placeholder="Mail" name="mail" [(ngModel)]="mail">
+                        </div>
+
+                        <div class="single-query">
+                          <input type="password" class="keyword-input mb-3" placeholder="Password" name="password" [(ngModel)]="password">
+                        </div>
+                      </div>
+
+                      <div class="single-query">
+                        <input type="text" class="keyword-input mb-3" placeholder="Telephone" name="telephone" [(ngModel)]="telephone">
+                      </div>
+                      <tr>   <td>  <select class="selectpicker mt-4" data-live-search="true"  name="role" [(ngModel)]="role" >
+                        <option value="" disabled selected>Choisir votre role</option>
+                        <option value="Proprietaire fond" >Proprietaire fond</option>
+                        <option value="Patient" >Client</option>
+                      </select></td>
+
+                      <div class="col-md-12 col-sm-12 col-xs-12 text-center">
+                        <div class="query-submit-button">
+                          <button type="submit" class="btn_fill mt-4"  >Ajoute</button>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--===== #/LOGIN =====-->
+<app-footer></app-footer>

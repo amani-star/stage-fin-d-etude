@@ -1,0 +1,62 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+/******image header*********/
+.padding-bottom-top-120 {
+  padding: 120px 0;
+}
+.main-title {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 5px;
+  display: inline-block;
+  float: none;
+  margin: 0 auto;
+  outline: 1px solid #dbdbdb;
+  outline-offset: -10px;
+  padding: 30px 150px;
+  text-align: center;
+}
+.main-title h5 {
+  font-weight: normal;
+  margin: 0px;
+  margin-bottom: 15px;
+  color: #1f1f1f;
+  font-size: 16px;
+}
+.line_4, .line_5, .line_6 {
+  background: #ed2a28;
+}
+
+.line_4 {
+  width: 200px;
+  margin: 10px auto 0;
+}
+.line_5 {
+  width: 150px;
+  margin: 5px auto 0;
+}
+.line_6 {
+  width: 100px;
+  margin: 5px auto 15px;
+}
+.line_4, .line_5, .line_6 {
+  display: block;
+  height: 1px;
+  position: relative;
+}
+
+.page-title a:hover {
+  border-bottom: 1px solid #ed2a28;
+}
+.page-title a, .page-title span {
+  color: #676767;
+  font-size: 14px;
+  font-weight: 400;
+}
+.page-title span {
+  margin: 0 10px;
+  position: relative;
+}
+/******end image header*********/

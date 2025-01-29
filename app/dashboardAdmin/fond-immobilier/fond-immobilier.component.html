@@ -1,0 +1,47 @@
+<div class="container pt-5">
+  <button class="btn btn-danger" (click)="ajoutenouveaufond()">
+    <i class="fa fa-plus-square" aria-hidden="true" ></i> Ajouter fond immobilier</button><br><br>
+      <!--<form #f="ngForm" (ngSubmit)="onRecherche(f.value)">-->
+  <div>
+    <!--<label>Keyword</label>-->
+    <!--<input type="text" name="keyword" [(ngModel)]="filters.keyword" (input)="filterType()">-->
+    <!--<button type="submit" class="btn btn-primary"> cherche<i></i></button>-->
+  <!--  <input type="search" class="form-control" [(ngModel)]="filter_data">-->
+  </div>
+  <table class="table table-bordered table-striped">
+    <thead>
+    <tr>
+      <th>Nom de type</th>
+      <th>Age</th>
+      <th>Adresse</th>
+      <th>Distance</th>
+      <th>Type logement</th>
+      <th>Prix</th>
+      <th class="text-center">Action</th>
+    </tr>
+    </thead>
+    <!--<tbody *ngIf="(type | filter: filter_data).length  0; "-->
+    <tbody>
+    <tr *ngFor="let item of fondImmobilier ">
+      <!--<td><span>{{item.fondId}}</span></td>-->
+     <td >
+        <div *ngFor="let type of listeType">
+        <span *ngIf="type.documentId === item.documentId">{{type.nom}}</span>
+        </div></td>
+      <td><span>{{item.age}}</span></td>
+      <td><span>{{item.adresse}}</span></td>
+      <td><span>{{item.distance}}</span></td>
+      <td><span>{{item.logement}}</span></td>
+      <td><span>{{item.prix}}</span></td>
+
+     <td>
+        <a  class="btn btn-danger" (click)="deleteFond(item)"> Delete </a>
+       <a  class="btn btn-success" (click)="Modifierfond(item)"> Modifier</a>
+        <!--<a  class="btn btn-success" (click)="ModifierType(item)"> Modifier</a>
+      --></td>
+    </tr>
+    </tbody>
+
+  </table>
+
+</div>

@@ -1,0 +1,156 @@
+<div class="container pt-5">
+  <div class="row">
+    <div class="col-md-12">
+      <h1 class="text-uppercase bottom40 text-center pt-4"  >Fonction <span class="color_red">D'appartenance</span></h1>
+    </div>
+  </div>
+  <div class="row search-2">
+    <form >
+      <div class="col-md-3 col-sm-6 ">
+        <div class="row">
+          <table>
+
+            <tr>   <td>  <select class="selectpicker mt-4" data-live-search="true"  name="selectlogement" [(ngModel)]="selectlogement">
+              <option value="" disabled selected>type de Logement</option>
+              <option value="louer" >louer</option>
+              <option value="acheter" >acheter</option>
+            </select></td>
+              <td>  <select  name="cars" id="cars" [(ngModel)]="selectedOption" class="type mt-4" >
+                <option value="" disabled selected>Le nom des types</option>
+                <option *ngFor="let type of listeType" [value]="type.documentId" >
+                  {{type.nom}}
+                </option>
+              </select></td>
+            </tr>
+
+          </table>
+        </div>
+      </div>
+
+
+        <div class="row">
+      <table border="0">
+
+        <tr> <div class="col-md-3 col-sm-6"> <td><select class="form-select mt-4" aria-label="Default select example"  name="prix"[(ngModel)]="prix">
+          <option value="" disabled selected>Terme linguistique de prix</option>
+          <option value="Non cher">Non cher</option>
+          <option value="Assez cher">Assez cher</option>
+          <option value="Cher">Cher</option>
+        </select></td>
+          <td>
+            <div class="single-query" >
+              <input type="text" class="keyword-input mt-4 " placeholder="Fonction d'appartenance" name="fonctiondappartenance"  >
+            </div>
+          </td>
+          <td>
+            <div class="single-query">
+              <input type="text" class="keyword-input mt-4 " placeholder="Fonction d'appartenance" name="fonctiondappartenance"  >
+            </div>
+          </td>
+          <td>
+            <div class="single-query">
+              <input type="text" class="keyword-input mt-4 " placeholder="Fonction d'appartenance" name="fonctiondappartenance"  >
+            </div>
+          </td>
+        </div>
+        </tr>
+
+        <div class="col-md-3 col-sm-6">
+        <tr>
+
+          <select class="form-select mt-4" aria-label="Default select example" name="distance" [(ngModel)]="distance">
+          <option value="" disabled selected>Terme linguistique proximite</option>
+          <option value="Proche">Proche</option>
+          <option value="Assez proche">Assez proche</option>
+          <option value="Loin">Loin</option>
+        </select>
+          <td>
+            <div class="single-query">
+              <input type="text" class="keyword-input mt-4 " placeholder="Fonction d'appartenance" name="fonctiondappartenance"  >
+            </div>
+          </td>
+          <td>
+            <div class="single-query">
+              <input type="text" class="keyword-input mt-4 " placeholder="Fonction d'appartenance" name="fonctiondappartenance"  >
+            </div>
+          </td>
+          <td>
+            <div class="single-query">
+              <input type="text" class="keyword-input mt-4 " placeholder="Fonction d'appartenance" name="fonctiondappartenance"  >
+            </div>
+          </td>
+
+        </tr>
+        </div>
+
+<div class="col-md-3 col-sm-6">
+        <tr>
+          <select class="form-select mt-4" aria-label="Default select example"  name="age"[(ngModel)]="age">
+          <option value="" disabled selected>Terme linguistique ancienneté</option>
+          <option value="Nouvelle">Nouvelle</option>
+          <option value="Assez ancienneté">Assez ancienneté</option>
+          <option value="Ancienneté">Ancienneté</option>
+        </select>
+          <td>
+            <div class="single-query">
+              <input type="text" class="keyword-input mt-4 " placeholder="Fonction d'appartenance" name="fonctiondappartenance"  >
+            </div>
+          </td>
+          <td>
+            <div class="single-query">
+              <input type="text" class="keyword-input mt-4 " placeholder="Fonction d'appartenance" name="fonctiondappartenance"  >
+            </div>
+          </td>
+          <td>
+            <div class="single-query">
+              <input type="text" class="keyword-input mt-4 " placeholder="Fonction d'appartenance" name="fonctiondappartenance"  >
+            </div>
+          </td>
+        </tr>
+</div>
+      </table>
+        </div>
+
+    </form>
+  </div>
+  <div class="d-grid gap-2 col-6 mx-auto">
+    <tr>  <div class="query-submit-button mt-4 ">
+      <td>  <button type="submit" class="btn_fill1 black" (click)="rechche()">Recherche</button>
+      </td>
+
+    </div></tr>
+
+  </div>
+  <!--<form #f="ngForm" (ngSubmit)="onRecherche(f.value)">-->
+  <div>
+    <!--<label>Keyword</label>-->
+    <!--<input type="text" name="keyword" [(ngModel)]="filters.keyword" (input)="filterType()">-->
+    <!--<button type="submit" class="btn btn-primary"> cherche<i></i></button>-->
+    <!--  <input type="search" class="form-control" [(ngModel)]="filter_data">-->
+  </div>
+  <table class="table table-bordered table-striped mt-4">
+    <thead>
+    <tr>
+      <th>Num Fond</th>
+      <th>Prix</th>
+      <th>Proximité</th>
+      <th>Age</th>
+      <th>Valeur</th>
+
+    </tr>
+    </thead>
+    <!--<tbody *ngIf="(type | filter: filter_data).length  0; "-->
+    <tbody  >
+    <tr *ngFor="let item of fonctiondappartenance">
+      <td><span>{{item.fondId}}</span></td>
+      <td><span>{{item.prix}}</span></td>
+      <td><span>{{item.distance}}</span></td>
+      <td><span>{{item.age}}</span></td>
+      <td><span>{{item.valeur}}</span></td>
+
+    </tr>
+    </tbody>
+
+  </table>
+
+</div>
